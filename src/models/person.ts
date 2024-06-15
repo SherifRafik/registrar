@@ -8,4 +8,5 @@ export default interface Person {
   adult: boolean;
   popularity: number;
   known_for: Array<Movie | TvShow>;
+  known_for_department: string;
 }
