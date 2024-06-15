@@ -1,7 +1,8 @@
 import "./App.css";
 
-function App() {
-  return <h1>Hello, World!</h1>;
-}
+// Components
+import Game from "./components/Game/Game";
+
+const App = () => <Game />;
 
 export default App;
