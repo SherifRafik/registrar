@@ -1,4 +1,4 @@
-import { _get } from "@/api/apiClient";
+import { _get } from "@/api/api-client";
 
 class PeopleService {
   public getByName = (name: string) => {
