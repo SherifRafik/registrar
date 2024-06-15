@@ -20,7 +20,7 @@ const useGetActorMovies = (actorId: number) => {
     };
 
     fetchMovies(actorId);
-  }, []);
+  }, [actorId]);
 
   console.log(movies);
 
