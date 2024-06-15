@@ -1710,3 +1710,9 @@ export const ACTOR_NAMES = [
   "أحمد طه",
   "إيهاب بدر الدين",
 ];
+
+export const DEPARTMENT = "Acting";
+
+export const IMAGES_BASE_URL = import.meta.env.VITE_TMDB_IMAGES_BASE_URL;
+
+export const IMAGE_SIZE = "w500";
