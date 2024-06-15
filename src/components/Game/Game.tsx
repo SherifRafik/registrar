@@ -2,29 +2,22 @@
 import { Row } from "react-bootstrap";
 
 // Hooks
-import useGetRandomActor from "@/hooks/useGetRandomActor";
+import useStartGame from "@/hooks/useStartGame";
 
 // Components
 import ActorCard from "@/components/Actors/ActorCard/ActorCard";
 
 const Game = () => {
-  const firstActor = useGetRandomActor();
-  const secondActor = useGetRandomActor();
-
-  if (!firstActor || !secondActor) return <div>Loading ...</div>;
+  const actors = useStartGame();
 
   return (
-    <Row className="mb-3">
-      <ActorCard
-        actor={firstActor}
-        onClick={() => console.log(firstActor.name)}
-      />
-
-      <ActorCard
-        actor={secondActor}
-        onClick={() => console.log(secondActor.name)}
-      />
-    </Row>
+    <>
+      <Row className="mb-2">
+        {actors.map((actor) => (
+          <ActorCard actor={actor} onClick={() => console.log(actor.id)} />
+        ))}
+      </Row>
+    </>
   );
 };
 

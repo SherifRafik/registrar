@@ -14,7 +14,7 @@ import { getRandomActor } from "@/utils";
 import { DEPARTMENT } from "@/constants";
 
 const useGetRandomActor = () => {
-  const [actor, setActor] = useState<Person | null>(null);
+  const [actor, setActor] = useState<Person>({} as Person);
 
   useEffect(() => {
     const fetchRandomActor = async () => {
