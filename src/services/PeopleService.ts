@@ -29,6 +29,7 @@ class PeopleService {
     const response: PersonMovieCredits = await getCreditedMovies(id).then(
       (response) => response.data
     );
+
     return response.cast;
   };
 }
