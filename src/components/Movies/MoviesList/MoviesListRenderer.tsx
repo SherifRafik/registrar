@@ -4,6 +4,10 @@ import useGetCreditedMovies from "@/hooks/useGetCreditedMovies";
 // Components
 import MoviesList from "@/components/Movies/MoviesList/MoviesList";
 
+// Styling
+import "@/components/Movies/MoviesList/MoviesList.css";
+
+
 interface MoviesActorListRendererProps {
   actorId: number;
   movieOnClick: (id: number) => void;
@@ -16,7 +20,12 @@ const MoviesListRenderer = ({
   const movies = useGetCreditedMovies(actorId);
 
   return (
-    <MoviesList movies={movies} movieOnClick={(movieId) => movieOnClick(movieId)} />
+    <div className="movies-list">
+      <MoviesList
+        movies={movies}
+        movieOnClick={(movieId) => movieOnClick(movieId)}
+      />
+    </div>
   );
 };
 

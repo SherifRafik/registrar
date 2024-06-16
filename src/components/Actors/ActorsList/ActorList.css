@@ -1,0 +1,11 @@
+.actors-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.actor-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}

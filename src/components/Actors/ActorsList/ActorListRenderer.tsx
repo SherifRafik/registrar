@@ -4,6 +4,9 @@ import useGetMovieCredits from "@/hooks/useGetMovieCredits";
 // Components
 import ActorsList from "@/components/Actors/ActorsList/ActorsList";
 
+// Styling
+import "@/components/Actors/ActorsList/ActorList.css";
+
 interface ActorsListRendererProps {
   movieId: number;
   actorOnClick: (id: number) => void;
@@ -16,7 +19,12 @@ const ActorsListRenderer = ({
   const actors = useGetMovieCredits(movieId);
 
   return (
-    <ActorsList actors={actors} actorOnClick={(actorId) => actorOnClick(actorId)} />
+    <div className="actors-list">
+      <ActorsList
+        actors={actors}
+        actorOnClick={(actorId) => actorOnClick(actorId)}
+      />
+    </div>
   );
 };
 

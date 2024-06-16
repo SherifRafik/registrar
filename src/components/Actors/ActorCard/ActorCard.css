@@ -1,7 +1,7 @@
 .actor-card {
   width: 200px;
   height: auto;
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
 }
 
@@ -16,6 +16,6 @@
 
 @media (max-width: 768px) {
   .actor-card {
-    width: calc(100% - 20px);
+    width: calc(50% - 20px);
   }
 }
