@@ -5,5 +5,7 @@ export const getRandomActor = () => {
 };
 
 export const buildImageURL = (imagePath: string, imageSize: string) => {
+  if (!imagePath) return "";
+
   return `${IMAGES_BASE_URL}/${imageSize}/${imagePath}`;
 };
