@@ -1,24 +1,19 @@
-import { useState } from "react";
+import { useContext } from "react";
 
 // Models
-import Step, { StepType } from "@/models/step";
+import StepsContextProps from "@/models/steps-context-props";
 
-const useSteps = () => {
-  const [steps, setSteps] = useState<Step[]>([]);
+// Contexts
+import { StepsContext } from "@/contexts/StepsContext";
 
-  const addStep = (type: StepType, id: number) => {
-    setSteps((prevSteps) => [...prevSteps, { type, id }]);
-  };
+const useSteps = (): StepsContextProps => {
+  const context = useContext(StepsContext);
 
-  const resetStepsFrom = (index: number) => {
-    setSteps((prevSteps) => prevSteps.slice(0, index + 1));
-  };
+  if (context === undefined) {
+    throw new Error("useSteps must be used within a StepsProvider");
+  }
 
-  return {
-    steps,
-    addStep,
-    resetStepsFrom,
-  };
+  return context;
 };
 
 export default useSteps;
