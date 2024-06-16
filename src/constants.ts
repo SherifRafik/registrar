@@ -1716,3 +1716,8 @@ export const DEPARTMENT = "Acting";
 export const IMAGES_BASE_URL = import.meta.env.VITE_TMDB_IMAGES_BASE_URL;
 
 export const IMAGE_SIZE = "w500";
+
+export const ENTITY_TYPES = {
+  PERSON: 'person',
+  MOVIE: 'movie',
+};
