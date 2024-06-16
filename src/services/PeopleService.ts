@@ -8,19 +8,24 @@ import Person from "@/models/person";
 import PersonMovieCredits from "@/models/person-movie-credits";
 import SearchResults from "@/models/search-results";
 
+// Utils
+import { getRandomActor } from "@/utils";
+
 class PeopleService {
-  public searchByName = async (name: string) => {
+  public searchByName = async () => {
     let filteredResults = [];
 
     do {
-      const response: SearchResults<Person> = await searchByName(name).then(
+      const response: SearchResults<Person> = await searchByName(getRandomActor()).then(
         (response) => response.data
       );
 
       filteredResults = response.results.filter(
         (item) => item.known_for_department === DEPARTMENT
       );
-    } while (filteredResults.length === 0);
+
+      console.log(filteredResults)
+    } while (filteredResults.length <= 0);
 
     return filteredResults[filteredResults.length - 1];
   };
