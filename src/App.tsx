@@ -1,7 +1,7 @@
 import "./App.css";
 
 // Components
-import Game from "./components/Game/Game";
+import Game from "@/components/Game/Game";
 
 const App = () => <Game />;
 
