@@ -40,7 +40,7 @@ const Game = () => {
   return (
     <>
       {win ? (
-        <div>Congratulations! You have connected the celebrities!</div>
+        <div>Bravo 3aleik enta kasabt</div>
       ) : (
         <>
           <Row className="mb-2">
