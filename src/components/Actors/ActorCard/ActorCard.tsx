@@ -9,6 +9,7 @@ import { buildImageURL } from "@/utils";
 
 // Constants
 import { IMAGE_SIZE } from "@/constants";
+import PLACEHOLDER from "$/placeholder.svg";
 
 // Styling
 import "@/components/Actors/ActorCard/ActorCard.css";
@@ -24,7 +25,11 @@ const ActorCard = ({ actor, onClick }: ActorCardProps) => {
       <Card.Img
         className="actor-avatar"
         variant="top"
-        src={buildImageURL(actor.profile_path, IMAGE_SIZE)}
+        src={
+          actor.profile_path
+            ? buildImageURL(actor.profile_path, IMAGE_SIZE)
+            : PLACEHOLDER
+        }
       />
       <Card.Body className="text-center">
         <Card.Title>{actor.original_name}</Card.Title>
