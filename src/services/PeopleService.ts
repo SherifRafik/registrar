@@ -24,8 +24,9 @@ class PeopleService {
         (item) => item.known_for_department === DEPARTMENT
       );
 
-      console.log(filteredResults)
     } while (filteredResults.length <= 0);
+
+    filteredResults.sort((a, b) => a.popularity - b.popularity);
 
     return filteredResults[filteredResults.length - 1];
   };
