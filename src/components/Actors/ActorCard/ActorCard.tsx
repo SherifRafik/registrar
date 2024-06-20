@@ -27,7 +27,7 @@ const ActorCard = ({ actor, onClick }: ActorCardProps) => {
         src={buildImageURL(actor.profile_path, IMAGE_SIZE)}
       />
       <Card.Body className="text-center">
-        <Card.Title>{actor.name}</Card.Title>
+        <Card.Title>{actor.original_name}</Card.Title>
       </Card.Body>
     </Card>
   );
