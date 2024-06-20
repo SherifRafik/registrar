@@ -43,7 +43,7 @@ const Game = () => {
         <div>Bravo 3aleik enta kasabt</div>
       ) : (
         <>
-          <Row className="mb-2">
+          <Row className="mb-2 d-flex justify-content-center">
             {actors.map((actor) => (
               <ActorCard
                 key={actor.id}
